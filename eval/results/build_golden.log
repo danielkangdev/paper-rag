@@ -1,0 +1,344 @@
+
+g001 [arxiv:2310.11511] What is Self-RAG and what are reflection tokens?
+   - (arxiv:2310.11511) "We introduce a new framework called Self-Reflective Retrieval-Augmented Generation (SELF-RAG) that enhances an LM’s quality"
+   - (arxiv:2310.11511) "These reflection tokens (Table 1) signal the need for retrieval or confirm the output’s relevance"
+   - (arxiv:2310.11511) "SELF-RAG trains an LM to learn to retrieve, generate, and critique text passages and its"
+   ! snapped (1.00): 'We introduce a new framework called Self-Reflective Retrieval-Augmented Generation (SELF-RAG) that enhances an LM’s quality and factuality through retrieval and self-reflection.' -> 'We introduce a new framework called Self-Reflective Retrieval-Augmented Generation (SELF-RAG) that enhances an LM’s quality'
+   ! snapped (1.00): 'These reflection tokens (Table 1) signal the need for retrieval or confirm the output’s relevance, support, or completeness.' -> 'These reflection tokens (Table 1) signal the need for retrieval or confirm the output’s relevance'
+   ! snapped (1.00): 'SELF-RAG trains an LM to learn to retrieve, generate, and critique text passages and its own generation by predicting the next tokens from its original vocabulary as well as newly added special tokens, called reflection tokens.' -> 'SELF-RAG trains an LM to learn to retrieve, generate, and critique text passages and its'
+
+g002 [arxiv:2310.11511] How does Self-RAG decide when to retrieve at inference time?
+   - (arxiv:2310.11511) "These reflection tokens (Table 1) signal the need for retrieval or confirm the output’s relevance"
+   - (arxiv:2310.11511) "SELF-RAG dynamically decides when to retrieve text passages by predicting Retrieve ."
+   - (arxiv:2310.11511) "SELF-RAG trains an LM to learn to retrieve, generate, and critique text passages and its"
+   ! snapped (0.96): 'These reflection tokens signal the need for retrieval or confirm the output’s relevance, support, or completeness.' -> 'These reflection tokens (Table 1) signal the need for retrieval or confirm the output’s relevance'
+   ! snapped (0.99): 'SELF-RAG dynamically decides when to retrieve text passages by predicting Retrieve.' -> 'SELF-RAG dynamically decides when to retrieve text passages by predicting Retrieve .'
+   ! snapped (1.00): 'SELF-RAG trains an LM to learn to retrieve, generate, and critique text passages and its own generation by predicting the next tokens.' -> 'SELF-RAG trains an LM to learn to retrieve, generate, and critique text passages and its'
+
+g003 [arxiv:2310.11511] What do IsRel, IsSup, and IsUse evaluate in Self-RAG?
+   - (arxiv:2310.11511) "These reflection tokens (Table 1) signal the need for retrieval or confirm the output’s relevance"
+   - (arxiv:2310.11511) "The bottom three rows are three types of Critique tokens, and the bold text indicates"
+   - (arxiv:2310.11511) "This aspect indicates whether the evidence provides useful information (Relevant) or not (Irrelevant)."
+   ! snapped (1.00): 'These reflection tokens (Table 1) signal the need for retrieval or confirm the output’s relevance, support, or completeness.' -> 'These reflection tokens (Table 1) signal the need for retrieval or confirm the output’s relevance'
+   ! snapped (1.00): 'The bottom three rows are three types of Critique tokens, and the bold text indicates the most desirable critique tokens.' -> 'The bottom three rows are three types of Critique tokens, and the bold text indicates'
+
+g004 [arxiv:2310.11511] Why does Self-RAG help reduce unsupported generation?
+   - (arxiv:2310.11511) "enhances the quality and factuality of an LLM through retrieval and self-reflection"
+   - (arxiv:2310.11511) "SELF-RAG first determines if augmenting the continued generation with retrieved passages would be helpful."
+   - (arxiv:2310.11511) "Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand"
+   ! snapped (0.94): 'SELF-RAG enhances the quality and factuality of an LLM through retrieval and self-reflection.' -> 'enhances the quality and factuality of an LLM through retrieval and self-reflection'
+   ! snapped (0.99): 'Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand.' -> 'Our framework trains a single arbitrary LM that adaptively retrieves passages on-demand'
+
+g005 [arxiv:2310.11511] What training signal teaches Self-RAG to use reflection tokens?
+   - (arxiv:2310.11511) "Our end-to-end training lets an LM M generate text informed by retrieved passages, if needed"
+   - (arxiv:2310.11511) "SELF-RAG first determines if augmenting the continued generation with retrieved passages would be helpful."
+   ! no close verbatim match: 'Reflection tokens, inspired by reward models used in reinforcement learning, are inserted offline into the original corpus by a trained critic model.'
+   ! snapped (1.00): 'Our end-to-end training lets an LM M generate text informed by retrieved passages, if needed, and criticize the output by learning to generate special tokens.' -> 'Our end-to-end training lets an LM M generate text informed by retrieved passages, if needed'
+
+g006 [arxiv:2310.11511] What tasks does Self-RAG evaluate on?
+   - (arxiv:2310.11511) "Short-form generations tasks include two open-domain question answering (QA) datasets, PopQA"
+   ! no close verbatim match: 'SELF-RAG is evaluated on a range of downstream tasks.'
+   ! snapped (0.93): 'Short-form generations tasks include two open-domain question answering (QA) datasets, PopQA and TriviaQA.' -> 'Short-form generations tasks include two open-domain question answering (QA) datasets, PopQA'
+   ! no close verbatim match: 'Long-form generation tasks include a biography generation task and a long-form QA task ASQA.'
+
+g007 [arxiv:2310.11511, arxiv:2005.11401] How does Self-RAG differ from ordinary retrieve-then-generate RAG?
+   - (arxiv:2310.11511) "Self-Reflective Retrieval-Augmented Generation (SELF-RAG) that enhances an LM’s quality and factuality through retrieval and self-reflection."
+   - (arxiv:2310.11511) "SELF-RAG first determines if augmenting the continued generation with retrieved passages would be helpful."
+   ! no close verbatim match: 'SELF-RAG learns to retrieve, critique, and generate text passages to enhance overall generation quality, factuality, and verifiability.'
+
+g008 [arxiv:2005.11401] What is the original RAG paper main contribution?
+   - (arxiv:2005.11401) "we explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG)"
+   - (arxiv:2005.11401) "we bring hybrid parametric and non-parametric memory to the “workhorse of NLP,” i.e. sequence-to-sequence (seq2seq)"
+   - (arxiv:2005.11401) "We build RAG models where the parametric memory is a pre-trained seq2seq transformer, and the"
+   ! snapped (1.00): 'we bring hybrid parametric and non-parametric memory to the “workhorse of NLP,” i.e. sequence-to-sequence (seq2seq) models' -> 'we bring hybrid parametric and non-parametric memory to the “workhorse of NLP,” i.e. sequence-to-sequence (seq2seq)'
+   ! snapped (1.00): 'we build RAG models where the parametric memory is a pre-trained seq2seq transformer, and the non-parametric memory is a dense vector index of Wikipedia' -> 'We build RAG models where the parametric memory is a pre-trained seq2seq transformer, and the'
+
+g009 [arxiv:2005.11401] How does the original RAG combine parametric and non-parametric memory?
+   - (arxiv:2005.11401) "We build RAG models where the parametric memory is a pre-trained seq2seq transformer, and the"
+   - (arxiv:2005.11401) "As shown in Figure 1, our models leverage two components: (i) a retriever pη(z|x) with"
+   - (arxiv:2005.11401) "This example shows how parametric and non-parametric memories work together—the non-parametric component helps to guide"
+   ! snapped (1.00): 'We build RAG models where the parametric memory is a pre-trained seq2seq transformer, and the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever.' -> 'We build RAG models where the parametric memory is a pre-trained seq2seq transformer, and the'
+   ! snapped (1.00): 'As shown in Figure 1, our models leverage two components: (i) a retriever pη(z|x) with parameters η that returns (top-K truncated) distributions over text passages given a query x and (ii) a generator pθ(yi|x, z, y1:i−1).' -> 'As shown in Figure 1, our models leverage two components: (i) a retriever pη(z|x) with'
+   ! snapped (1.00): 'This example shows how parametric and non-parametric memories work together—the non-parametric component helps to guide the generation, drawing out specific knowledge stored in the parametric memory.' -> 'This example shows how parametric and non-parametric memories work together—the non-parametric component helps to guide'
+
+g010 [arxiv:2005.11401] What is the difference between RAG-Sequence and RAG-Token?
+   - (arxiv:2005.11401) "In one approach, RAG-Sequence, the model uses the same document to predict each target token."
+   - (arxiv:2005.11401) "In the RAG-Token model we can draw a different latent document for each target token"
+   - (arxiv:2005.11401) "one which conditions on the same retrieved passages across the whole generated sequence, and another"
+   ! snapped (1.00): 'In the RAG-Token model we can draw a different latent document for each target token and marginalize accordingly.' -> 'In the RAG-Token model we can draw a different latent document for each target token'
+   ! snapped (1.00): 'one which conditions on the same retrieved passages across the whole generated sequence, and another which can use different passages per token.' -> 'one which conditions on the same retrieved passages across the whole generated sequence, and another'
+
+g011 [arxiv:2005.11401] Which open-domain QA datasets does the original RAG paper use?
+   - (arxiv:2005.11401) "Our RAG models achieve state-of-the-art results on open Natural Questions [29], WebQuestions [3] and CuratedTrec"
+   - (arxiv:2005.11401) "consider four popular open-domain QA datasets: Natural Questions (NQ) [29], TriviaQA (TQA) [24]. WebQuestions (WQ)"
+   - (arxiv:2005.11401) "have only explored open-domain extractive question answering."
+   ! snapped (0.95): 'Our RAG models achieve state-of-the-art results on open Natural Questions, WebQuestions and CuratedTrec.' -> 'Our RAG models achieve state-of-the-art results on open Natural Questions [29], WebQuestions [3] and CuratedTrec'
+   ! snapped (0.93): 'We consider four popular open-domain QA datasets: Natural Questions (NQ), TriviaQA (TQA), WebQuestions (WQ) and CuratedTrec (CT).' -> 'consider four popular open-domain QA datasets: Natural Questions (NQ) [29], TriviaQA (TQA) [24]. WebQuestions (WQ)'
+   ! snapped (0.98): 'we have only explored open-domain extractive question answering.' -> 'have only explored open-domain extractive question answering.'
+
+g012 [arxiv:2005.11401] How does RAG use DPR or dense retrieval?
+   - (arxiv:2005.11401) "the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural"
+   - (arxiv:2005.11401) "a retriever pη(z|x) with parameters η that returns (top-K truncated) distributions over text passages given"
+   - (arxiv:2005.11401) "the retrieval component pη(z|x) is based on DPR [26]."
+   ! snapped (1.00): 'the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural retriever.' -> 'the non-parametric memory is a dense vector index of Wikipedia, accessed with a pre-trained neural'
+   ! snapped (1.00): 'a retriever pη(z|x) with parameters η that returns (top-K truncated) distributions over text passages given a query x' -> 'a retriever pη(z|x) with parameters η that returns (top-K truncated) distributions over text passages given'
+
+g013 [arxiv:2005.11401] Why does the original RAG paper discuss factuality in generation?
+   - (arxiv:2005.11401) "we find that our models generate responses that are more factual, specific, and diverse than"
+   - (arxiv:2005.11401) "We found that people prefer RAG’s generation over purely parametric BART, finding RAG more factual"
+   - (arxiv:2005.11401) "RAG models hallucinate less and generate factually correct text more often than BART."
+   ! snapped (1.00): 'we find that our models generate responses that are more factual, specific, and diverse than a BART baseline.' -> 'we find that our models generate responses that are more factual, specific, and diverse than'
+   ! snapped (1.00): 'we found that people prefer RAG’s generation over purely parametric BART, finding RAG more factual and specific.' -> 'We found that people prefer RAG’s generation over purely parametric BART, finding RAG more factual'
+
+g014 [arxiv:2312.10997] What does the RAG survey mean by Naive RAG, Advanced RAG, and Modular RAG?
+   - (arxiv:2312.10997) "The RAG research paradigm is continuously evolving, and we categorize it into three stages: Naive"
+   - (arxiv:2312.10997) "Advanced RAG proposes multiple optimization strategies around pre-retrieval and post-retrieval"
+   ! snapped (0.99): 'The RAG research paradigm is continuously evolving, and we categorize it into three stages: Naive RAG, Advanced RAG, and Modular RAG.' -> 'The RAG research paradigm is continuously evolving, and we categorize it into three stages: Naive'
+   ! snapped (0.99): 'Advanced RAG proposes multiple optimization strategies around pre-retrieval and post-retrieval.' -> 'Advanced RAG proposes multiple optimization strategies around pre-retrieval and post-retrieval'
+   ! no close verbatim match: 'The modular RAG architecture advances beyond the former two RAG paradigms, offering enhanced adaptability and versatility.'
+
+g015 [arxiv:2312.10997] What pre-retrieval optimizations are discussed in the RAG survey?
+   - (arxiv:2312.10997) "Common methods include query rewriting query transformation, query expansion and other techniques"
+   - (arxiv:2312.10997) "Section III focuses on optimization methods in retrieval,including indexing, query and embedding optimization."
+   - (arxiv:2312.10997) "The system prioritizes and retrieves the top K chunks that demonstrate the greatest similarity to"
+   ! snapped (0.99): 'Common methods include query rewriting query transformation, query expansion and other techniques.' -> 'Common methods include query rewriting query transformation, query expansion and other techniques'
+   ! snapped (1.00): 'Section III focuses on optimization methods in retrieval, including indexing, query and embedding optimization.' -> 'Section III focuses on optimization methods in retrieval,including indexing, query and embedding optimization.'
+   ! snapped (1.00): 'The system prioritizes and retrieves the top K chunks that demonstrate the greatest similarity to the query.' -> 'The system prioritizes and retrieves the top K chunks that demonstrate the greatest similarity to'
+
+g016 [arxiv:2312.10997] What is HyDE in RAG retrieval?
+   - (arxiv:2312.10997) "HyDE [11] construct hypothetical documents (assumed answers to the original query)."
+   - (arxiv:2312.10997) "It focuses on embedding similarity from answer to answer rather than seeking embedding similarity for"
+   - (arxiv:2312.10997) "In the RAG system, both the step-back question and the original query are used for"
+   ! snapped (0.96): 'HyDE constructs hypothetical documents (assumed answers to the original query).' -> 'HyDE [11] construct hypothetical documents (assumed answers to the original query).'
+   ! snapped (1.00): 'It focuses on embedding similarity from answer to answer rather than seeking embedding similarity for the problem or query.' -> 'It focuses on embedding similarity from answer to answer rather than seeking embedding similarity for'
+   ! snapped (0.99): 'In the RAG system, both the step-back question and the original query are used for retrieval.' -> 'In the RAG system, both the step-back question and the original query are used for'
+
+g017 [arxiv:2312.10997] What is reranking in RAG and why use it?
+   - (arxiv:2312.10997) "Reranking fundamentally reorders document chunks to highlight the most pertinent results first"
+   - (arxiv:2312.10997) "effectively reducing the overall document pool, severing a dual purpose in information retrieval"
+   - (arxiv:2312.10997) "Re-ranking the retrieved information to relocate the most relevant content to the edges of the"
+   ! snapped (0.99): 'Reranking fundamentally reorders document chunks to highlight the most pertinent results first.' -> 'Reranking fundamentally reorders document chunks to highlight the most pertinent results first'
+   ! snapped (0.99): 'effectively reducing the overall document pool, severing a dual purpose in information retrieval.' -> 'effectively reducing the overall document pool, severing a dual purpose in information retrieval'
+   ! snapped (1.00): 'Re-ranking the retrieved information to relocate the most relevant content to the edges of the prompt is a key strategy.' -> 'Re-ranking the retrieved information to relocate the most relevant content to the edges of the'
+
+g018 [arxiv:2312.10997] What chunk sizes does the RAG survey mention for embedding-oriented chunking?
+   ! no close verbatim match: 'the most common method is to split the document into chunks on a fixed number of tokens (e.g., 100, 256, 512) [88].'
+   ! no close verbatim match: 'Larger chunks can capture more context, but they also generate more noise.'
+   ! no close verbatim match: 'However, chunks leads to truncation within sentences, prompting the optimization of a recursive splits and sliding window methods.'
+   !! NO VALID QUOTE — question will be skipped by retrieval eval
+
+g019 [arxiv:2312.10997] Why is recall important in the retrieval stage of RAG?
+   - (arxiv:2312.10997) "The retrieval phase often struggles with precision and recall, leading to the selection of misaligned"
+   - (arxiv:2312.10997) "RAG relies on external knowledge to enhance LLMs, while the type of retrieval source and"
+   - (arxiv:2312.10997) "retrieving as many relevant documents as possible and concatenating them to form a lengthy retrieval"
+   ! snapped (1.00): 'the retrieval phase often struggles with precision and recall, leading to the selection of misaligned or irrelevant chunks, and the missing of crucial information.' -> 'The retrieval phase often struggles with precision and recall, leading to the selection of misaligned'
+   ! snapped (1.00): 'RAG relies on external knowledge to enhance LLMs, while the type of retrieval source and the granularity of retrieval units both affect the final generation results.' -> 'RAG relies on external knowledge to enhance LLMs, while the type of retrieval source and'
+   ! snapped (1.00): 'retrieving as many relevant documents as possible and concatenating them to form a lengthy retrieval prompt is beneficial.' -> 'retrieving as many relevant documents as possible and concatenating them to form a lengthy retrieval'
+
+g020 [arxiv:2312.10997] How does Modular RAG differ from Naive RAG?
+   - (arxiv:2312.10997) "Modular RAG inherits and develops from the previous paradigm, showcasing greater flexibility overall."
+   - (arxiv:2312.10997) "The development of Advanced RAG and Modular RAG is a response to these specific shortcomings"
+   ! no close verbatim match: 'The modular RAG architecture advances beyond the former two RAG paradigms, offering enhanced adaptability and versatility.'
+   ! snapped (1.00): 'The development of Advanced RAG and Modular RAG is a response to these specific shortcomings in Naive RAG.' -> 'The development of Advanced RAG and Modular RAG is a response to these specific shortcomings'
+
+g021 [arxiv:2305.06983] What is Active Retrieval Augmented Generation in FLARE?
+   - (arxiv:2305.06983) "which is then utilized as a query to retrieve relevant documents to regenerate the sentence"
+   - (arxiv:2305.06983) "we propose an active retrieval augmented generation framework that decides when and what to retrieve"
+   ! no close verbatim match: 'FLARE actively retrieves during generation using a forward-looking prediction.'
+   ! snapped (1.00): 'which is then utilized as a query to retrieve relevant documents to regenerate the sentence if it contains low-confidence tokens.' -> 'which is then utilized as a query to retrieve relevant documents to regenerate the sentence'
+   ! snapped (1.00): 'we propose an active retrieval augmented generation framework that decides when and what to retrieve during generation.' -> 'we propose an active retrieval augmented generation framework that decides when and what to retrieve'
+
+g022 [arxiv:2305.06983] How does FLARE decide when and what to retrieve?
+   - (arxiv:2305.06983) "actively decide when and what to retrieve across the course of the generation."
+   - (arxiv:2305.06983) "FLARE iteratively generates a temporary next sentence, use it as the query to retrieve relevant"
+   - (arxiv:2305.06983) "we propose an active retrieval augmented generation framework that decides when and what to retrieve"
+   ! snapped (0.96): 'FLARE actively decide when and what to retrieve across the course of the generation.' -> 'actively decide when and what to retrieve across the course of the generation.'
+   ! snapped (1.00): 'FLARE iteratively generates a temporary next sentence, use it as the query to retrieve relevant documents.' -> 'FLARE iteratively generates a temporary next sentence, use it as the query to retrieve relevant'
+   ! snapped (1.00): 'we propose an active retrieval augmented generation framework that decides when and what to retrieve during generation.' -> 'we propose an active retrieval augmented generation framework that decides when and what to retrieve'
+
+g023 [arxiv:2305.06983, arxiv:2310.11511] How does FLARE differ from Self-RAG in retrieval timing?
+   - (arxiv:2305.06983) "The second method directly uses the LM’s generation as search queries"
+   - (arxiv:2305.06983) "we actively trigger retrieval if any token of ˆst has a probability lower than a"
+   ! no close verbatim match: 'FLARE triggers retrieval from low-confidence forward-looking generations.'
+   ! snapped (0.99): 'the second method directly uses the LM’s generation as search queries.' -> 'The second method directly uses the LM’s generation as search queries'
+   ! snapped (0.99): 'we actively trigger retrieval if any token of ˆst has a probability lower than a threshold.' -> 'we actively trigger retrieval if any token of ˆst has a probability lower than a'
+
+g024 [arxiv:2305.06983] Why is FLARE considered an iterative retrieval method?
+   - (arxiv:2305.06983) "continually gathering information throughout generation is essential."
+   - (arxiv:2305.06983) "FLARE iteratively generates a temporary next sentence"
+   - (arxiv:2305.06983) "to retrieve relevant information if it contains lowconfidence tokens"
+   ! snapped (0.99): 'FLARE iteratively generates a temporary next sentence.' -> 'FLARE iteratively generates a temporary next sentence'
+   ! snapped (0.92): 'actively retrieves relevant information if it contains low-confidence tokens.' -> 'to retrieve relevant information if it contains lowconfidence tokens'
+
+g025 [arxiv:2104.08663] What problem does BEIR benchmark target?
+   - (arxiv:2104.08663) "we introduce Benchmarking-IR (BEIR), a robust and heterogeneous evaluation benchmark for information retrieval."
+   - (arxiv:2104.08663) "With BEIR, we take an important step towards a single and unified benchmark to evaluate"
+   - (arxiv:2104.08663) "we present a novel robust and heterogeneous benchmark called BEIR (Benchmarking IR), comprising of 18"
+   ! snapped (1.00): 'With BEIR, we take an important step towards a single and unified benchmark to evaluate the zero-shot capabilities of retrieval systems.' -> 'With BEIR, we take an important step towards a single and unified benchmark to evaluate'
+   ! snapped (1.00): 'we present a novel robust and heterogeneous benchmark called BEIR (Benchmarking IR), comprising of 18 retrieval datasets for comparison and evaluation of model generalization.' -> 'we present a novel robust and heterogeneous benchmark called BEIR (Benchmarking IR), comprising of 18'
+
+g026 [arxiv:2104.08663] Why is BM25 an important baseline in BEIR?
+   - (arxiv:2104.08663) "Our results show BM25 is a robust baseline"
+   - (arxiv:2104.08663) "Overall, BM25 remains a strong baseline for zero-shot text retrieval."
+   - (arxiv:2104.08663) "BEIR reveals it to be a strong baseline for generalization"
+   ! snapped (0.99): 'BEIR reveals it to be a strong baseline for generalization.' -> 'BEIR reveals it to be a strong baseline for generalization'
+
+g027 [arxiv:2104.08663] What metric does BEIR commonly report for retrieval quality?
+   - (arxiv:2104.08663) "we find that Normalised Cumulative Discount Gain (nDCG@k) provides a good balance"
+   - (arxiv:2104.08663) "We hope this framework allows us to better evaluate and understand existing retrieval systems"
+   ! no close verbatim match: 'All scores denote nDCG@10.'
+
+g028 [arxiv:2104.08663, arxiv:2312.10997] How does BEIR motivate hybrid retrieval in this project?
+   - (arxiv:2104.08663) "Our results show BM25 is a robust baseline"
+   - (arxiv:2104.08663) "Overall, BM25 remains a strong baseline for zero-shot text retrieval."
+   - (arxiv:2104.08663) "hybrid lexical-dense approaches which aims to combine the strengths of both approaches"
+
+g029 [arxiv:2401.01313] What are intrinsic and extrinsic hallucinations?
+   - (arxiv:2401.01313) "“hallucinate” – generating content that appears factual but is ungrounded."
+   - (arxiv:2401.01313) "effectively identifying and correcting intrinsic and extrinsic hallucinations."
+   - (arxiv:2401.01313) "the challenge posed by LLMs generating incorrect information and identifies it as a significant concern"
+   ! snapped (0.99): 'hallucinate – generating content that appears factual but is ungrounded.' -> '“hallucinate” – generating content that appears factual but is ungrounded.'
+   ! snapped (1.00): 'the challenge posed by LLMs generating incorrect information and identifies it as a significant concern.' -> 'the challenge posed by LLMs generating incorrect information and identifies it as a significant concern'
+
+g030 [arxiv:2401.01313, arxiv:2312.10997] How can retrieval augmentation mitigate hallucinations?
+   - (arxiv:2401.01313) "RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not"
+   - (arxiv:2312.10997) "By referencing external knowledge, RAG effectively reduces the problem of generating factually incorrect content."
+   - (arxiv:2401.01313) "These documents are then used by the seq2seq model, specifically BART, to generate the final"
+   ! snapped (0.99): 'RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not only pertinent and current but also verifiable.' -> 'RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not'
+   ! snapped (1.00): 'These documents are then used by the seq2seq model, specifically BART, to generate the final output.' -> 'These documents are then used by the seq2seq model, specifically BART, to generate the final'
+
+g031 [arxiv:2401.01313] What categories of hallucination mitigation are discussed in the hallucination survey?
+   - (arxiv:2401.01313) "This paper presents a comprehensive survey of over thirty-two techniques developed to mitigate hallucination in"
+   - (arxiv:2401.01313) "Researchers have proposed various strategies, encompassing feedback mechanisms, external information retrieval, and early refinement in"
+   - (arxiv:2401.01313) "Hallucination mitigation in LLMs represents a multifaceted challenge addressed through a spectrum of innovative techniques."
+   ! snapped (1.00): 'This paper presents a comprehensive survey of over thirty-two techniques developed to mitigate hallucination in LLMs.' -> 'This paper presents a comprehensive survey of over thirty-two techniques developed to mitigate hallucination in'
+   ! snapped (1.00): 'Researchers have proposed various strategies, encompassing feedback mechanisms, external information retrieval, and early refinement in language model generation, to address this challenge.' -> 'Researchers have proposed various strategies, encompassing feedback mechanisms, external information retrieval, and early refinement in'
+
+g032 [arxiv:2401.01313, arxiv:2310.11511] Why is citation checking useful for hallucination control?
+   - (arxiv:2401.01313) "RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not"
+   - (arxiv:2401.01313) "RARR conducts research and post-editing to align content with retrieved evidence while preserving original qualities"
+   - (arxiv:2401.01313) "The paper highlights the challenge posed by LLMs generating incorrect information and identifies it as"
+   ! snapped (0.99): 'RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not only pertinent and current but also verifiable.' -> 'RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not'
+   ! snapped (0.99): 'RARR conducts research and post-editing to align content with retrieved evidence while preserving original qualities.' -> 'RARR conducts research and post-editing to align content with retrieved evidence while preserving original qualities'
+   ! snapped (1.00): 'The paper highlights the challenge posed by LLMs generating incorrect information and identifies it as a significant concern for researchers.' -> 'The paper highlights the challenge posed by LLMs generating incorrect information and identifies it as'
+
+g033 [arxiv:2005.11401, arxiv:2312.10997] Compare original RAG and the RAG survey view of modern RAG systems.
+   - (arxiv:2312.10997) "This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing"
+   - (arxiv:2312.10997) "The analysis outlines three developmental paradigms within the RAG framework: Naive, Advanced, and Modular RAG"
+   - (arxiv:2005.11401) "We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) — models which combine pre-trained"
+   ! snapped (1.00): 'This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing the Naive RAG, the Advanced RAG, and the Modular RAG.' -> 'This comprehensive review paper offers a detailed examination of the progression of RAG paradigms, encompassing'
+   ! snapped (1.00): 'The analysis outlines three developmental paradigms within the RAG framework: Naive, Advanced, and Modular RAG, each representing a progressive enhancement over its predecessors.' -> 'The analysis outlines three developmental paradigms within the RAG framework: Naive, Advanced, and Modular RAG'
+   ! snapped (1.00): 'We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) — models which combine pre-trained parametric and non-parametric memory for language generation.' -> 'We explore a general-purpose fine-tuning recipe for retrieval-augmented generation (RAG) — models which combine pre-trained'
+
+g034 [arxiv:2310.11511, arxiv:2401.01313] Compare Self-RAG and the hallucination survey on self-reflection.
+   - (arxiv:2310.11511) "enhances the quality and factuality of an LLM through retrieval and self-reflection"
+   ! no close verbatim match: 'SELF-RAG operationalizes reflection tokens.'
+   ! snapped (0.94): 'SELF-RAG enhances the quality and factuality of an LLM through retrieval and self-reflection.' -> 'enhances the quality and factuality of an LLM through retrieval and self-reflection'
+   ! no close verbatim match: 'the hallucination survey treats self-reflection as one mitigation family.'
+
+g035 [arxiv:2104.08663, arxiv:2312.10997] What evaluation concern connects BEIR and this Paper RAG project?
+   - (arxiv:2104.08663) "we hope this framework allows us to better evaluate and understand existing retrieval systems"
+   - (arxiv:2312.10997) "This comprehensive review paper offers a detailed examination of the progression of RAG paradigms"
+   - (arxiv:2312.10997) "Evaluating the retrieval quality is crucial for determining the effectiveness of the context sourced by"
+   ! snapped (1.00): 'Evaluating the retrieval quality is crucial for determining the effectiveness of the context sourced by the retriever component' -> 'Evaluating the retrieval quality is crucial for determining the effectiveness of the context sourced by'
+
+g036 [arxiv:2312.10997] What does the RAG survey say about post-retrieval processing?
+   - (arxiv:2312.10997) "Section IV concentrates on postretrieval process and LLM fine-tuning in generation."
+   - (arxiv:2312.10997) "The main methods in post-retrieval process include rerank chunks and context compressing."
+   - (arxiv:2312.10997) "Reranking fundamentally reorders document chunks to highlight the most pertinent results first"
+   ! snapped (0.99): 'Reranking fundamentally reorders document chunks to highlight the most pertinent results first.' -> 'Reranking fundamentally reorders document chunks to highlight the most pertinent results first'
+
+g037 [arxiv:2312.10997] What is the role of query rewriting in advanced RAG?
+   - (arxiv:2312.10997) "Common methods include query rewriting query transformation, query expansion and other techniques"
+   - (arxiv:2312.10997) "The core concept is to retrieve chunks based on a transformed query instead of the"
+   - (arxiv:2312.10997) "The system prioritizes and retrieves the top K chunks that demonstrate the greatest similarity to"
+   ! snapped (0.99): 'Common methods include query rewriting, query transformation, query expansion and other techniques.' -> 'Common methods include query rewriting query transformation, query expansion and other techniques'
+   ! snapped (1.00): 'The core concept is to retrieve chunks based on a transformed query instead of the user’s original query.' -> 'The core concept is to retrieve chunks based on a transformed query instead of the'
+   ! snapped (1.00): 'The system prioritizes and retrieves the top K chunks that demonstrate the greatest similarity to the query.' -> 'The system prioritizes and retrieves the top K chunks that demonstrate the greatest similarity to'
+
+g038 [arxiv:2104.08663, arxiv:2312.10997] How does dense retrieval relate to contrastive learning?
+   - (arxiv:2104.08663) "Dense retrievers map queries and documents in a shared, dense vector space"
+   - (arxiv:2104.08663) "Dense retrieval models (esp. ANCE and TAS-B), that map queries and documents independently to vector"
+   - (arxiv:2312.10997) "the encoder undergoes training using contrastive loss throughout this process"
+   ! snapped (0.99): 'Dense retrievers map queries and documents in a shared, dense vector space.' -> 'Dense retrievers map queries and documents in a shared, dense vector space'
+   ! snapped (0.99): 'Dense retrieval models (esp. ANCE and TAS-B), that map queries and documents independently to vector spaces, perform strongly on certain datasets.' -> 'Dense retrieval models (esp. ANCE and TAS-B), that map queries and documents independently to vector'
+   ! snapped (0.99): 'the encoder undergoes training using contrastive loss throughout this process.' -> 'the encoder undergoes training using contrastive loss throughout this process'
+
+g039 [arxiv:2005.11401] What does the original RAG paper retrieve from its non-parametric memory?
+   - (arxiv:2005.11401) "the non-parametric memory is a dense vector index of Wikipedia"
+   - (arxiv:2005.11401) "a retriever pη(z|x) with parameters η that returns (top-K truncated) distributions over text passages"
+   - (arxiv:2005.11401) "the top K documents are retrieved using the retriever"
+
+g040 [arxiv:2005.11401] How does RAG-Token provide finer control than RAG-Sequence?
+   - (arxiv:2005.11401) "In one approach, RAG-Sequence, the model uses the same document to predict each target token."
+   - (arxiv:2005.11401) "In the RAG-Token model we can draw a different latent document for each target token"
+   - (arxiv:2005.11401) "another which can use different passages per token."
+   ! snapped (0.99): 'In the RAG-Token model we can draw a different latent document for each target token.' -> 'In the RAG-Token model we can draw a different latent document for each target token'
+
+g041 [arxiv:2310.11511] What does Self-RAG use critique tokens for after retrieving a passage?
+   - (arxiv:2310.11511) "It then generates critique tokens to criticize its own output and choose best one"
+   - (arxiv:2310.11511) "These reflection tokens (Table 1) signal the need for retrieval or confirm the output’s relevance"
+   - (arxiv:2310.11511) "SELF-RAG) that enhances an LM’s quality and factuality through retrieval and self-reflection."
+   ! snapped (0.96): 'These reflection tokens signal the need for retrieval or confirm the output’s relevance, support, or completeness.' -> 'These reflection tokens (Table 1) signal the need for retrieval or confirm the output’s relevance'
+   ! snapped (0.86): 'SELF-RAG enhances the quality and factuality of an LLM through retrieval and self-reflection.' -> 'SELF-RAG) that enhances an LM’s quality and factuality through retrieval and self-reflection.'
+
+g042 [arxiv:2305.06983, arxiv:2312.10997] Why can one-shot retrieval be insufficient for complex RAG questions?
+   - (arxiv:2305.06983) "This is limiting, however, in more general scenarios involving generation of long texts, where continually"
+   - (arxiv:2305.06983) "long-form generation presents complex information needs that are not always evident from the input alone."
+   - (arxiv:2305.06983) "It is crucial to retrieve extra information as needed during generation"
+   ! snapped (1.00): 'This is limiting, however, in more general scenarios involving generation of long texts, where continually gathering information throughout generation is essential.' -> 'This is limiting, however, in more general scenarios involving generation of long texts, where continually'
+   ! snapped (0.99): 'It is crucial to retrieve extra information as needed during generation.' -> 'It is crucial to retrieve extra information as needed during generation'
+
+g043 [arxiv:2104.08663] What makes BEIR heterogeneous?
+   - (arxiv:2104.08663) "a robust and heterogeneous evaluation benchmark for information retrieval."
+   - (arxiv:2104.08663) "comprising of 18 retrieval datasets for comparison and evaluation of model generalization."
+   - (arxiv:2104.08663) "The datasets present in BEIR are selected from diverse domains ranging from Wikipedia, scientific publications"
+   ! snapped (1.00): 'The datasets present in BEIR are selected from diverse domains ranging from Wikipedia, scientific publications, Twitter, news, to online user communities, and many more.' -> 'The datasets present in BEIR are selected from diverse domains ranging from Wikipedia, scientific publications'
+
+g044 [arxiv:2401.01313] What does hallucination evaluation try to measure?
+   - (arxiv:2401.01313) "This tendency to furnish incorrect data, commonly referred to as hallucination"
+   - (arxiv:2401.01313) "RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not"
+   - (arxiv:2401.01313) "the challenge posed by LLMs generating incorrect information and identifies it as a significant concern"
+   ! snapped (0.97): 'the tendency to furnish incorrect data, commonly referred to as hallucination' -> 'This tendency to furnish incorrect data, commonly referred to as hallucination'
+   ! snapped (1.00): 'RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not only pertinent and current but also verifiable' -> 'RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not'
+   ! snapped (1.00): 'the challenge posed by LLMs generating incorrect information and identifies it as a significant concern for researchers' -> 'the challenge posed by LLMs generating incorrect information and identifies it as a significant concern'
+
+g045 [arxiv:2312.10997, arxiv:2401.01313] How do reranking and citation validation solve different RAG problems?
+   - (arxiv:2312.10997) "Reranking fundamentally reorders document chunks to highlight the most pertinent results first"
+   - (arxiv:2401.01313) "RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not"
+   - (arxiv:2312.10997) "The core task of RAG remains Question Answering (QA), including traditional single-hop/multi-hop QA"
+   ! snapped (0.99): 'Reranking fundamentally reorders document chunks to highlight the most pertinent results first.' -> 'Reranking fundamentally reorders document chunks to highlight the most pertinent results first'
+   ! snapped (0.99): 'RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not only pertinent and current but also verifiable.' -> 'RAG effectively mitigates the issue of hallucination in LLMs by generating responses that are not'
+   ! snapped (0.88): 'The primary objective of RAG remains Question Answering (QA), including traditional single-hop/multi-hop QA.' -> 'The core task of RAG remains Question Answering (QA), including traditional single-hop/multi-hop QA'
+
+n001 [unanswerable] What is the price of an Nvidia H100 GPU today?
+
+n002 [unanswerable] What will Apple announce at its next iPhone event?
+
+n003 [unanswerable] What is the weather in Beijing tomorrow?
+
+n004 [unanswerable] Explain how proof-of-stake blockchain consensus works.
+
+n005 [unanswerable] How do convolutional neural networks detect edges in images?
+
+n006 [unanswerable] What is the capital gains tax rate for California residents this year?
+
+n007 [unanswerable] Which NBA team won last night?
+
+n008 [unanswerable] How should I treat a migraine at home?
+
+n009 [unanswerable] What is the best restaurant near Times Square right now?
+
+n010 [unanswerable] What is the current USD to JPY exchange rate?
+
+n011 [unanswerable] How should I repair a leaking kitchen sink?
+
+n012 [unanswerable] Does this corpus explain Kubernetes autoscaling for checkout traffic?
+
+n013 [unanswerable] What is the latest stock price of NVIDIA?
+
+n014 [unanswerable] Write a legal contract for selling this course.
+
+n015 [unanswerable] What private API key is configured in this repository?
+
+wrote eval\golden.jsonl: 60 questions, 45 answerable, 121 quotes, 1 answerable without a valid quote

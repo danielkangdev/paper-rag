@@ -1,0 +1,10 @@
+.git
+.venv
+.env
+data/pdfs
+data/qdrant
+data/*.sqlite*
+paper-rag-agent-main
+**/__pycache__
+.pytest_cache
+.ruff_cache

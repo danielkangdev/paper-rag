@@ -1,0 +1,40 @@
+# secrets
+.env
+.env.*
+!.env.example
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+
+# data / models (generated at runtime)
+data/qdrant/
+data/pdfs/
+data/*.db
+data/*.sqlite*
+.cache/
+models/
+
+# original project (reference only, not part of the new repo)
+paper-rag-agent-main/
+
+# os / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# eval run logs (contain local paths / library warnings)
+eval/results/*.log
+!eval/results/build_golden.log
+
+# local planning notes (not published)
+PLAN.md
